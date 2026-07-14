@@ -14,6 +14,10 @@ GitHub Actions 实现 [GLaDOS][glados] 自动签到
 
 1. 启用 Actions, 每天北京时间 00:10 自动签到
 
+## 定时任务说明
+
+公开仓库连续 60 天没有仓库活动时, GitHub 可能会自动禁用由 `schedule` 触发的工作流。定时运行本身不会刷新仓库活跃时间。如果工作流被禁用, 请进入仓库的 **Actions** 页面, 选择 `run` 后点击 **Enable workflow** 恢复运行。详见 [GitHub 官方说明][workflow-enable]。
+
 ## 高级功能
 
 1. 如有多个帐号, 可以写为多行 Secret `GLADOS`, 每行写一个 Cookie
@@ -34,3 +38,4 @@ GitHub Actions 实现 [GLaDOS][glados] 自动签到
 [crontab]: https://crontab.guru/
 [pushplus]: https://www.pushplus.plus/
 [wxpusher]: https://wxpusher.zjiecode.com/
+[workflow-enable]: https://docs.github.com/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows
